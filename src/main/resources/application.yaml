@@ -1,0 +1,30 @@
+server.port: 8002
+app:
+  name: product
+  operator.name: ORDR
+product.count.max: 100
+
+
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+  datasource:
+    password: pass
+    username: sa
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:file:~/orderdb  #testdb
+  h2:
+    console:
+      path: /h2
+      enabled: true
+
+logging:
+  level:
+    com:
+      sharma:
+        nks:
+          products:
+            order:
+              management: DEBUG
